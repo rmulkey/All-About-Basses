@@ -6,166 +6,116 @@
   <title>AllAboutBasses — Official Site</title>
   <meta name="description" content="AllAboutBasses: bass gear reviews, play-throughs, lessons, and family-friendly music. Watch the latest videos and subscribe on YouTube." />
 
-  <!-- Open Graph / Twitter -->
+  <!-- SEO / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AllAboutBasses — Official Site" />
-  <meta property="og:description" content="Bass gear reviews, play‑throughs, and lessons. Watch the latest videos and subscribe." />
+  <meta property="og:description" content="Bass gear reviews, play‑throughs, and lessons. Watch and subscribe for more!" />
   <meta property="og:url" content="https://allaboutbasses.example" />
-  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- JSON-LD: Organization + WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AllAboutBasses",
-    "url": "https://allaboutbasses.example",
-    "sameAs": [
-      "https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ"
-    ],
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.ytimg.com/vi_webp/placeholder/hqdefault.webp"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AllAboutBasses",
-    "url": "https://allaboutbasses.example",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.youtube.com/results?search_query=AllAboutBasses+{search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Tailwind (no build, CDN) -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    /* Basic focus styles for accessibility */
+    body { background: #f8fafc; }
     :focus-visible { outline: 3px solid #60a5fa; outline-offset: 2px; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="text-slate-900 antialiased">
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">AB</div>
+      <a href="/" class="flex items-center gap-3">
+        <img src="/assets/logo.png" alt="AllAboutBasses Logo" class="w-10 h-10 rounded-full" />
         <span class="font-extrabold text-xl">AllAboutBasses</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#videos" class="hover:text-blue-600">Videos</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#faq" class="hover:text-blue-600">FAQ</a>
+        <a href="/index.html#videos" class="hover:text-blue-600">Videos</a>
+        <a href="/posts.html" class="hover:text-blue-600">Posts</a>
+        <a href="/index.html#about" class="hover:text-blue-600">About</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ?sub_confirmation=1" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-red-600 text-white font-semibold shadow hover:brightness-110">Subscribe</a>
-        <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ" target="_blank" rel="noopener" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold shadow hover:brightness-110">Watch on YouTube</a>
-      </div>
+      <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ?sub_confirmation=1" target="_blank" class="px-4 py-2 rounded-xl bg-red-600 text-white font-semibold shadow hover:brightness-110">Subscribe</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Punchy bass. Play‑throughs. Gear that just <span class="text-blue-400">slaps</span>.</h1>
-        <p class="mt-4 text-lg text-slate-200">Welcome to AllAboutBasses — reviews, breakdowns, and lessons. New videos drop regularly. Dive in and subscribe for more.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#videos" class="px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow hover:brightness-95">See Latest Videos</a>
-          <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ?sub_confirmation=1" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-red-600 text-white font-semibold shadow hover:brightness-110">Subscribe on YouTube</a>
-        </div>
-      </div>
-      <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-        <!-- Auto-updating uploads playlist embed (free, no API key) -->
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?list=UUV2g9ChrWwYlKUD-MJi-ThQ" title="AllAboutBasses — Latest Uploads" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+  <section class="relative text-white">
+    <img src="/assets/hero-bg.jpg" alt="Bass guitar background" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <div class="relative max-w-6xl mx-auto px-4 py-24 text-center">
+      <h1 class="text-5xl font-extrabold mb-4">Punchy Bass. Real Gear. Real Tone.</h1>
+      <p class="text-lg text-slate-200 mb-6">Dive into play‑throughs, reviews, and family‑friendly music moments.</p>
+      <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ" target="_blank" class="px-6 py-3 bg-red-600 rounded-xl font-semibold hover:brightness-110">Watch on YouTube</a>
     </div>
   </section>
 
-  <!-- Videos grid (optional static highlights you can update occasionally) -->
+  <!-- Dynamic Videos Grid -->
   <section id="videos" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="flex items-end justify-between mb-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Recent Videos</h2>
-      <a class="text-sm font-semibold text-blue-600 hover:underline" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ/videos">View all on YouTube →</a>
-    </div>
-    <p class="text-slate-600 mb-6">This site is auto‑updated via the embedded uploads playlist above. Optionally, feature a few evergreen videos below:</p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Example highlight card (duplicate and replace VIDEO_ID) -->
-      <article class="group bg-white rounded-2xl shadow hover:shadow-lg transition p-3 border border-slate-200">
-        <div class="aspect-video rounded-xl overflow-hidden">
-          <iframe class="w-full h-full" src="https://www.youtube.com/embed/_A2-iw04Qso" title="Featured Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="p-3">
-          <h3 class="font-bold text-lg">Featured: Short bass riff</h3>
-          <p class="mt-1 text-sm text-slate-600">A quick taste — click through to like, comment, and subscribe.</p>
-          <a class="mt-3 inline-block text-blue-600 font-semibold hover:underline" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_A2-iw04Qso">Open on YouTube →</a>
-        </div>
-      </article>
-
-      <!-- Add more highlight cards as needed by duplicating the <article> block -->
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">About AllAboutBasses</h2>
-        <p class="text-slate-700 leading-relaxed">I’m Rodrigo — a bass player and engineering leader who loves punchy tone, clean mixes, and gear that performs. On the channel you’ll find gear reviews, play‑throughs, patches, and family‑friendly music jams featuring the kids.</p>
-        <ul class="mt-4 space-y-2 text-slate-700">
-          <li>• Gear breakdowns and practical settings</li>
-          <li>• Song play‑throughs with tabs/notes</li>
-          <li>• Kid‑safe music moments and behind‑the‑scenes</li>
-        </ul>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ?sub_confirmation=1" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-red-600 text-white font-semibold shadow hover:brightness-110">Subscribe</a>
-          <a href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold shadow hover:brightness-110">Visit Channel</a>
-        </div>
-      </div>
-      <div class="bg-slate-100 rounded-2xl p-6 border border-slate-200">
-        <h3 class="font-bold text-lg mb-2">Why this site helps your views</h3>
-        <ol class="list-decimal pl-5 space-y-2 text-slate-700">
-          <li><strong>Auto‑updates for free</strong> using the YouTube uploads playlist embed — no API key required.</li>
-          <li><strong>Strong SEO</strong> via clean markup, meta tags, JSON‑LD, fast loading, and mobile‑first layout.</li>
-          <li><strong>Clear CTAs</strong> push viewers to YouTube to watch, like, and subscribe.</li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ / SEO content -->
-  <section id="faq" class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">FAQ</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <details class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm" open>
-        <summary class="font-semibold cursor-pointer">How often are videos posted?</summary>
-        <p class="mt-3 text-slate-700">New videos appear automatically here as soon as they’re uploaded to YouTube. Check back often and subscribe on YouTube for alerts.</p>
-      </details>
-      <details class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-        <summary class="font-semibold cursor-pointer">Can I request a song or gear review?</summary>
-        <p class="mt-3 text-slate-700">Absolutely — leave a comment on the channel or use the YouTube Community tab to request topics.</p>
-      </details>
-    </div>
+    <h2 class="text-3xl font-extrabold mb-8">Latest Videos</h2>
+    <div id="videoGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-300">
-    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 items-center">
-      <p>© <span id="y"></span> AllAboutBasses. Built for speed and clarity.</p>
-      <div class="flex gap-4 md:justify-end">
-        <a class="hover:text-white" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCV2g9ChrWwYlKUD-MJi-ThQ">YouTube</a>
-      </div>
-    </div>
+  <footer class="bg-slate-900 text-slate-300 py-10 text-center">
+    <p>© <span id="y"></span> AllAboutBasses • Built for clarity and tone</p>
   </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Serverless video fetch (YouTube RSS proxy)
+    async function fetchVideos() {
+      try {
+        const res = await fetch('https://yt-rss-proxy.netlify.app/.netlify/functions/fetchVideos?channelId=UCV2g9ChrWwYlKUD-MJi-ThQ');
+        const videos = await res.json();
+        const grid = document.getElementById('videoGrid');
+        videos.slice(0, 6).forEach(v => {
+          const card = document.createElement('article');
+          card.className = 'bg-white rounded-2xl shadow hover:shadow-lg transition p-3 border border-slate-200';
+          card.innerHTML = `
+            <div class="aspect-video rounded-xl overflow-hidden">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/${v.videoId}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h3 class="font-bold text-lg mt-3">${v.title}</h3>
+            <a class="text-blue-600 font-semibold hover:underline" target="_blank" href="https://www.youtube.com/watch?v=${v.videoId}">Watch →</a>
+          `;
+          grid.appendChild(card);
+        });
+      } catch (e) {
+        console.error('Failed to load videos', e);
+      }
+    }
+    fetchVideos();
   </script>
+</body>
+</html>
+
+<!-- /posts.html template -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AllAboutBasses — Posts</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <header class="bg-white border-b border-slate-200 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4">
+      <a href="/index.html" class="font-bold text-xl">← Back to Home</a>
+      <span class="font-extrabold text-lg">AllAboutBasses Blog</span>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-16 space-y-12">
+    <article class="bg-white p-8 rounded-2xl shadow border border-slate-200">
+      <h1 class="text-3xl font-bold mb-4">Example Post Title</h1>
+      <p class="text-slate-700 leading-relaxed mb-6">Write your long-form post here — analysis, behind-the-scenes, or guides. Use markdown-like headings for readability.</p>
+      <p class="text-slate-600 text-sm">Posted on <time datetime="2025-10-30">October 30, 2025</time></p>
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300 text-center py-10">
+    <p>© <span id="y2"></span> AllAboutBasses Blog</p>
+  </footer>
+  <script>document.getElementById('y2').textContent = new Date().getFullYear();</script>
 </body>
 </html>
